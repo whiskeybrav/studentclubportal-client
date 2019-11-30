@@ -105,7 +105,7 @@ export default class LoginPage extends React.Component<loginPageProps, loginPage
                                 <p><Link to="/resetpassword">Regain access to your account.</Link></p>
                                 <hr />
                                 <p className="title is-6">Lost access to your registration email?</p>
-                                <p>Reach out to us at <a href="mailto:hello@whiskeybravo.org">hello@whiskeybravo.org</a> so we can help.</p>
+                                <p>Reach out to us at <a href="mailto:studentclubs@whiskeybravo.org">studentclubs@whiskeybravo.org</a> so we can help.</p>
                             </div>
                         </div>
                     </div>}

@@ -115,7 +115,7 @@ export default class SchoolPage extends React.Component<schoolPageProps, schoolP
                     {!this.state.school.is_verified && <div className="notification is-info">
                         <strong>Your school isn't verified.</strong> That means that only you will be able to access the portal until a member
                         of our team verifies your school. If it's been more than a few days and your school still hasn't been verified, feel free
-                        to reach out to us at <a href="mailto:hello@whiskeybravo.org">hello@whiskeybravo.org</a>.
+                        to reach out to us at <a href="mailto:studentclubs@whiskeybravo.org">studentclubs@whiskeybravo.org</a>.
                     </div>}
                     <div className="columns">
                         <div className="column">
