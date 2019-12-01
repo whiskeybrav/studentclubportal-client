@@ -1,5 +1,5 @@
 export default class api {
-    static baseurl = "http://api.clubs.whiskeybravo.invalid:8080/"
+    static baseurl = process.env.WBCLUBSBASEURL
 
     static async GET(path: string, data: Record<string, string>) {
         let result = await fetch(api.baseurl + path + "?" + api.buildParamStr(data), {
@@ -64,6 +64,10 @@ export default class api {
                 return "A school with that display name already exists."
             case "search_query_too_short":
                 return "The search query you provided was too short."
+            case "email_not_found":
+                return "An account with that email address could not be found."
+            case "no_reset_available":
+                return "That reset request couldn't be found. It may have expired."
             default:
                 return error
         }

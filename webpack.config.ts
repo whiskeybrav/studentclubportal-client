@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 const config = {
 	entry: './src/index.tsx',
@@ -25,7 +26,7 @@ const config = {
 			{
 				test: /\.ts(x)?$/,
 				use: [
-					'awesome-typescript-loader'
+					'ts-loader'
 				],
 				exclude: /node_modules/
 			},
@@ -73,12 +74,18 @@ const config = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "Whiskey Bravo Student Clubs",
+			meta: {
+				viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+			}
 		}),
 		new CopyPlugin([
 			{ from: 'static', to: 'static' },
 		]),
 		new MiniCssExtractPlugin({
 			filename: 'css/mystyles.css'
+		}),
+		new webpack.DefinePlugin({
+			'process.env.WBCLUBSBASEURL': JSON.stringify(process.env.WBCLUBSBASEURL || 'https://clubs-api.whiskeybravo.org/')
 		}),
 	],
 	// optimization: {
