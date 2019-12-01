@@ -14,6 +14,8 @@ import api from '../api';
 import LoginPage from './login/LoginPage';
 import SchoolPage from './schools/SchoolPage';
 import Footer, { slashResponse } from "./ui/Footer"
+import ForgotPage from './forgot/ForgotPage';
+import ResetPage from './forgot/ResetPage';
 
 interface appState {
 	me: meResponse | undefined
@@ -75,9 +77,11 @@ export default class App extends React.Component<{}, appState> {
 				<Route exact path="/" children={<WelcomePage />} />
 				<Route exact path="/register" children={<RegisterPage getAuthMe={this.getAuthMe.bind(this)} />} />
 				<Route exact path="/login" children={<LoginPage getAuthMe={this.getAuthMe.bind(this)} />} />
+				<Route exact path="/forgot" children={<ForgotPage />} />
 				{/* There's gotta be a better way of doing this */}
 				{/* TOOD: Clean up */}
 				<Route path="/s/:school" children={(props: { match: match, location: Location, history: History }) => <SchoolPage me={this.state.me} match={props.match} location={props.location} history={props.history} />} />
+				<Route path="/resetpassword/:key" children={(props: { match: match, location: Location, history: History }) => <ResetPage match={props.match} location={props.location} history={props.history} />} />
 			</Switch>
 			<Footer slash={this.state.slash} />
 		</Router>
