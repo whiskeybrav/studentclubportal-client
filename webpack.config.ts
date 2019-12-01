@@ -73,6 +73,9 @@ const config = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "Whiskey Bravo Student Clubs",
+			meta: {
+				viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+			}
 		}),
 		new CopyPlugin([
 			{ from: 'static', to: 'static' },
