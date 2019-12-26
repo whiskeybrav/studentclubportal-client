@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 
-import WelcomePage from "./welcome/WelcomePage"
+import WelcomeRedirect from "./welcome/WelcomePage"
 import RegisterPage from './register/RegisterPage';
 
 import { HashRouter as Router, Switch, Route, match } from "react-router-dom"
@@ -74,7 +74,7 @@ export default class App extends React.Component<{}, appState> {
 		return <Router>
 			<Navbar me={this.state.me} getAuthMe={this.getAuthMe.bind(this)} />
 			<Switch>
-				<Route exact path="/" children={<WelcomePage />} />
+				<Route exact path="/" children={<WelcomeRedirect />} />
 				<Route exact path="/register" children={<RegisterPage getAuthMe={this.getAuthMe.bind(this)} />} />
 				<Route exact path="/login" children={<LoginPage getAuthMe={this.getAuthMe.bind(this)} />} />
 				<Route exact path="/forgot" children={<ForgotPage />} />

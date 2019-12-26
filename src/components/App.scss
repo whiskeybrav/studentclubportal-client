@@ -11,5 +11,7 @@ $subtitle-family: $oswald;
 $blue: #80ADBE;
 $primary: $blue;
 $info: $cyan;
+$footer-background-color: $grey-darker;
+$footer-color: $white;
 
 @import "../../node_modules/bulma/bulma.sass";
