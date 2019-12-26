@@ -1,12 +1,17 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap');
 
 @import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
 
-$family-sans-serif: "Oswald", sans-serif;
+$oswald: "Oswald", sans-serif;
+$family-sans-serif: "Open Sans", sans-serif;
+$title-family: $oswald;
+$subtitle-family: $oswald;
 $blue: #80ADBE;
 $primary: $blue;
 $info: $cyan;
+$footer-background-color: $grey-darker;
+$footer-color: $white;
 
 @import "../../node_modules/bulma/bulma.sass";

@@ -1,5 +1,5 @@
 export default class api {
-    static baseurl = process.env.WBCLUBSBASEURL
+    static baseurl = process.env.WBCLUBSBASEURL;
 
     static async GET(path: string, data: Record<string, string>) {
         let result = await fetch(api.baseurl + path + "?" + api.buildParamStr(data), {
