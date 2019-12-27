@@ -4,13 +4,18 @@ import "./Footer.styl"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faCoffee, faHeart, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faYoutube, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { withRouter } from 'react-router-dom';
 
 export interface slashResponse {
     status: string
     version: string
 }
 
-export default function Footer(props: { slash: slashResponse | undefined }) {
+function Footer(props: any) {
+    if (props.location.pathname == "/frame") {
+        return null;
+    }
+
     return <footer className="footer is-dark">
         <div className="container">
             <div className="columns">
@@ -45,3 +50,5 @@ export default function Footer(props: { slash: slashResponse | undefined }) {
         </div>
     </footer>
 }
+
+export default withRouter(Footer)
