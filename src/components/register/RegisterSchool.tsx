@@ -145,7 +145,7 @@ export default class CreateSchool extends React.Component<createSchoolProps, cre
                 <div className="control">
                     <input className="input" type="text" placeholder="usna" name="displayname" value={this.state.displayname} onChange={this.handleInputChange.bind(this)} />
                 </div>
-                <p className="help">Your school's club portal will live at {this.state.displayname}.clubs.whiskeybravo.org.</p>
+                <p className="help">Your school's club portal will live at myclub.whiskeybravo.org/{this.state.displayname}.</p>
             </div>
             <div className="field">
                 <label className="label">Website</label>
