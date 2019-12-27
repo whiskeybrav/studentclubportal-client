@@ -35,7 +35,7 @@ export default function Footer(props: { slash: slashResponse | undefined }) {
                         </a>
                     </p>
                     <p>© 2020 Whiskey Bravo</p>
-                    <a className="button is-primary has-p-5" href="https://www.whiskeybravo.org/donate">Donate</a>
+                    <a className="button is-primary is-donate-button" href="https://www.whiskeybravo.org/donate">Donate</a>
                 </div>
                 <div className="column is-one-third is-footer-column">
                     <p><strong>Whiskey Bravo Student Clubs Portal</strong>{props.slash && " server version " + props.slash.version}. Designed with <FontAwesomeIcon icon={faHeart} /> {" "}
