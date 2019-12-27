@@ -7,6 +7,10 @@ import api from "../../api"
 
 function Navbar(props: any) {
 
+	if (props.location.pathname == "/frame") {
+		return null;
+	}
+
 	//TODO: MAKE TYPES BETTER
 	return <div>
 		<nav className="navbar is-dark" role="navigation" aria-label="main navigation">
