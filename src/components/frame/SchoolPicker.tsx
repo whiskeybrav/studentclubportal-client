@@ -80,7 +80,7 @@ export default class SchoolPicker extends React.Component<{}, schoolPickerState>
                         <th>School</th>
                         <th>City</th>
                         <th>State</th>
-                        <th>Pick</th>
+                        <th>Open</th>
                     </tr>
                 </thead>
                 <tbody>
