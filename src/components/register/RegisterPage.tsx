@@ -58,13 +58,13 @@ export default class RegisterPage extends React.Component<registerPageProps, reg
             return <RegisterStudent schoolId={this.state.schoolId} schoolName={this.state.schoolName} schoolDisplayName={this.state.displayName} getAuthMe={this.props.getAuthMe} />
         }
         if (this.state.answers.length == 0) {
-            return <Question question="Are you a student or a teacher?" onClick={this.addResponse.bind(this)} answers={[
+            return <Question question="What are you signing up as?" onClick={this.addResponse.bind(this)} answers={[
                 {
                     title: "Student",
                     icon: faUserGraduate
                 },
                 {
-                    title: "Teacher",
+                    title: "Teacher/Club Head",
                     icon: faChalkboardTeacher
                 }
             ]} />
